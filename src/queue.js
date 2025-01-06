@@ -18,6 +18,9 @@ class Queue {
     this.head = null;
     this.tail = null;
   }
+  getUnderlyingList() {
+    return this.head;
+  }
 
   enqueue(value) {
     const node = new ListNode(value);
@@ -29,10 +32,6 @@ class Queue {
       this.tail.next = node;
       this.tail = node;
     }
-  }
-  
-  getUnderlyingList() {
-    return this.head;
   }
 
   dequeue() {
